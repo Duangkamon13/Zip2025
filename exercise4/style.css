@@ -1,0 +1,160 @@
+body {
+    background-color: #87cefa;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 40px 10px 20px;
+}
+
+.cloud img {
+    width: 200px;
+    height: auto;
+}
+
+.logo img {
+    width: 400px;
+    height: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 20px 70px 70px;
+
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+}
+
+.pokemon-character {
+    background-color: white;
+    padding: 30px 10px 30px;
+    text-align: center;
+    border-radius: 16px;
+}
+.pokemon-character p {
+    color: #dc970f;
+}
+
+.filters {
+    grid-column: 1/-1;
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.field {
+    position: relative;
+    display: inline-block;
+    margin: 0 50px;
+}
+
+.field label {
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 15px;
+    color: #0b0101;
+    pointer-events: none;
+}
+
+.field select {
+    padding: 20px 40px;
+    border-radius: 16px;
+    border-color: #dc970f;
+    border-width: 3px;
+    font-size: 15px;
+    box-shadow: 0 2px 5px rgba(94, 95, 30, 0.1);
+
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.switch input:checked+.slider {
+    background-color: #3f88b5;
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(20px);
+}
+
+.label-text {
+    font-size: 16px;
+    color: #333;
+}
+h3{
+    color: #216c9b;
+    
+}
+footer {
+    background-color: #f8f9fa; 
+    padding: 30px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #555; 
+    border-top: 1px solid #0e0b0b; /* เส้นแบ่งด้านบน */
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 10;
+    font-family: 'Poppins', sans-serif;
+    
+}
