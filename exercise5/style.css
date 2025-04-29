@@ -1,0 +1,210 @@
+:root {
+    --primary-color: #216c9b;
+    --accent-color: #dc970f;
+    --background-color: #39a9ee;
+    --white-color: #ffffff;
+    --text-color: #333;
+    --footer-bg-color: #f8f9fa;
+    --footer-border-color: #0e0b0b;
+    --label-color: #0b0101;
+    --switch-bg: #ccc;
+    --switch-active-bg: #3f88b5;
+    --shadow-color: rgba(94, 95, 30, 0.1);
+    --highlight-color: #ffcb05;
+    --highlight-outline: #ffcb05;
+    --highlight-boxshadow: 0 0 12px rgba(255, 203, 5, 0.6);
+
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #5ec2f5;
+    --accent-color: #f5c86a;
+    --background-color: #1e1e1e;
+    --white-color: #2c2c2c;
+    --text-color: #f0f0f0;
+    --footer-bg-color: #121212;
+    --footer-border-color: #211f1f;
+    --label-color: #cccccc;
+    --switch-bg: #666;
+    --switch-active-bg: #5ec2f5;
+    --shadow-color: rgba(255, 255, 255, 0.05);
+    --highlight-color: #ffee58;
+    --highlight-outline: #ffee58;
+    --highlight-boxshadow: 0 0 12px rgba(255, 238, 88, 0.4);
+    --black-lable: #1e1e1e;
+  }
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-inline: 10px;
+    padding-block: 40px 20px;
+    /* padding: 40px 10px 20px; */
+}
+
+.cloud img {
+    width: 200px;
+    height: auto;
+}
+
+.logo img {
+    width: 400px;
+    height: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    column-gap: 20px;
+    row-gap: 20px;
+    /* padding: 20px 70px 70px; */
+    padding-inline: 70px;
+    padding-block: 20px 70px;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+}
+
+.pokemon-character {
+    background-color: var(--white-color);
+    /* padding: 30px 10px 30px; */
+    padding-inline: 10px;
+    padding-block: 30px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.pokemon-character p {
+    color: var(--accent-color);
+}
+
+.filters {
+    grid-column: 1/-1;
+    padding-block: 30px;
+    padding-inline: 30px;
+    background-color: var(--white-color);
+    text-align: center;
+    border-radius: 16px;
+}
+
+.field {
+    position: relative;
+    display: inline-block;
+    margin-inline: 50px;
+}
+
+.field label {
+    position: absolute;
+    inset-block-start: -8px;
+    inset-inline-start: 20px;
+    background-color: var(--white-color);
+    padding-inline: 5px;
+    font-size: 15px;
+    color: var(--label-color);
+    pointer-events: none;
+}
+
+.field select {
+    background-color: var(--black-lable);
+    padding-block: 20px;
+    padding-inline: 40px;
+    border-radius: 16px;
+    border-color: var(--accent-color);
+    border-width: 3px;
+    font-size: 15px;
+    color: var(--label-color);
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset-block: 0;
+    inset-inline: 0;
+    background-color: var(--switch-bg);
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    inset-block-end: 2px;
+    inset-inline-start: 2px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.switch input:checked+.slider {
+    background-color: var(--switch-active-bg);
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(20px);
+}
+
+.label-text {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+h3 {
+    color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    padding-block: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    border-block-start: 1px solid var(--footer-border-color);
+    margin-block-start: 50px;
+}
+
+footer p {
+    margin: 10;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pokemon-character:hover {
+    outline: 3px solid var(--highlight-outline);
+    box-shadow: var(--highlight-boxshadow);
+    transform: scale(1.07);
+    transition: all 0.2s ease-in-out;
+}
